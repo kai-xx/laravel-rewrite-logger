@@ -1,5 +1,5 @@
 [![Laravel Version](https://img.shields.io/badge/Laravel-%3E=5.5.0-brightgreen.svg?maxAge=2592000)](https://learnku.com/docs/laravel/5.5)
-[![Laravel Version](https://img.shields.io/badge/Laravel-%3E=6.2.0-brightgreen.svg?maxAge=2592000)](https://learnku.com/docs/laravel/6.x)
+[![Laravel Version](https://img.shields.io/badge/Laravel-%3E=6.x-brightgreen.svg?maxAge=2592000)](https://learnku.com/docs/laravel/6.x)
 
 更改目的：
 - 重写了日志格式
