@@ -59,4 +59,11 @@
            $body = \GuzzleHttp\json_decode($result->getBody()->getContents(), true);
        }
    ```
+5. 日志内容
+```
+// cli模式下的
+[2019-11-11 17:50:01] local.INFO: [app:partner-counselor src:127.0.0.1 time:406 trace:20ba14b9 url:App\Console\Commands\TrailPushMessage@handle href:N] 推送未锁定商机信息-未锁定: 结束执行
 
+// php-fpm模式下
+[2019-11-08 18:58:57] local.INFO: [app:partner-counselor src:127.0.0.1 time:36 trace:3633ccee url:GEThttp://127.0.0.1:50111/api/customers/348 href:N] 请求的数据为:{"token":"bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6NTAxMTFcL2FwaVwvYXV0aFwvbG9naW4iLCJpYXQiOjE1NzMyMDQwMzAsImV4cCI6MTU3MzgwODgzMCwibmJmIjoxNTczMjA0MDMwLCJqdGkiOiJZV2RsMU9PdFBOMTV3ZmNZIiwic3ViIjo2LCJwcnYiOiIyNTE5NzdjOTQ4NzExYTE4NDQyNGQ1ZDFmNjQ4Y2U0Mjg1NzQ5YmQwIn0.KTA7a8v5jw80O2WrXMHeVsJSeiv194hsTYHQEn_2KCo"}
+```
