@@ -3,8 +3,8 @@
 
 更改目的：
 - 重写了日志格式
-- 加入trace，一次请求的唯一标识
-- 加入error级别信息推送，demo中使用企业微信群助手
+- 加入```trace```，一次请求的唯一标识
+- 加入```error```级别信息推送，事例中使用企业微信群助手
 
 1. 将文件 ```AppTool.php``` ```Logger.php``` ```LogServiceProvider.php``` 复制到 ```app/Providers```文件夹下
 2. 在```config/app.php→providers```中加入
