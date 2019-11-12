@@ -5,6 +5,7 @@
 - 重写了日志格式
 - 加入```trace```，一次请求的唯一标识
 - 加入```error```级别信息推送，事例中使用企业微信群助手
+- 让我们可以更优雅、更方便追踪日志信息
 
 1. 将文件 ```AppTool.php``` ```Logger.php``` ```LogServiceProvider.php``` 复制到 ```app/Providers```文件夹下，
 将文件```BaseCommand.php```复制到```App\Console```下
@@ -84,7 +85,7 @@
         });
         ……
 ```
-2. 有关console中使用时，建议重写```\Illuminate\Console\Command::info``````\Illuminate\Console\Command::line``````\Illuminate\Console\Command::error```，然后所有console继承BaseCommand
+2. 有关console中使用时，建议重写```\Illuminate\Console\Command::info``` ```\Illuminate\Console\Command::line``` ```\Illuminate\Console\Command::error```，然后所有```console```继承```BaseCommand```
 demo代码块：
 ```php
 use App\Console\BaseCommand;
