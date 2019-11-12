@@ -3,6 +3,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Support\ServiceProvider;
 
 class LogServiceProvider extends ServiceProvider
@@ -59,7 +60,13 @@ class LogServiceProvider extends ServiceProvider
         $log->useFiles($errorPath, 'error');
         $logger = new \Illuminate\Log\Logger($log, $app['events']);
         // 注入全局容器
-        $app->instance('Log', $logger);
+        $app->instance('log', $logger);
+        $app->bind('Psr\Log\LoggerInterface', function (Application $app) {
+            return $app['log']->getMonolog();
+        });
+        $app->bind('\Illuminate\Log\LogManager', function (Application $app) {
+            return $app['log'];
+        });
 
         // 设置console请求日志
         $clog = new Logger($app->environment());
