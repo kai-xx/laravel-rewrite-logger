@@ -62,7 +62,7 @@ class LogServiceProvider extends ServiceProvider
         // 注入全局容器
         $app->instance('log', $logger);
         $app->bind('Psr\Log\LoggerInterface', function (Application $app) {
-            return $app['log']->getMonolog();
+            return $app['log']->getLogger();
         });
         $app->bind('\Illuminate\Log\LogManager', function (Application $app) {
             return $app['log'];
