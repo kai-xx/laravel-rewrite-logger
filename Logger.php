@@ -27,6 +27,29 @@ class Logger extends \Monolog\Logger
             'emergency' => self::EMERGENCY
         ];
     }
+     /**
+     * Get a log channel instance.
+     *
+     * @param  string|null  $channel
+     * @return \Psr\Log\LoggerInterface
+     */
+    public function channel($channel = null)
+    {
+        return $this;
+    }
+
+    /**
+     * Get a log driver instance.
+     *
+     * @param  string|null  $driver
+     * @return \Psr\Log\LoggerInterface
+     */
+    public function driver($driver = null)
+    {
+        return $this;
+    }
+
+    
     public static function getExecutionTime(){
         if (is_null(static::$startTime)) static::$startTime = microtime(true);
         $diff = microtime(true) - static::$startTime;
